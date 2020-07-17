@@ -7,12 +7,12 @@ def emails_as_json():
         next(reader)
         data = []
         # create an array to check for non unique email addresses
-        duplicates_checker = []
+        unique_email_addresses = []
         for row in reader:
             # check if the email is unique
-            if row[0] not in duplicates_checker:
+            if row[0] not in unique_email_addresses:
                 # if the email is unique, add it to the arrays
-                duplicates_checker.append(row[0])
+                unique_email_addresses.append(row[0])
                 data.append({'address': row[0]})
         
         return data
