@@ -25,7 +25,7 @@ const DomainList = () => {
         <div>
             <h1>domains</h1>
             {
-                !domains || domains.length == 0 ? (<p>...loading</p>)
+                !domains || domains.length === 0 ? (<p>...loading</p>)
                 : (
                     domains.map((v, i) => (
                     <div key={i + v}> {v.domain}: {v.count}</div>

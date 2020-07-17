@@ -25,7 +25,7 @@ function EmailList() {
     <div className="App">
     <h1>Emails</h1>
       {
-        !emails || emails.length == 0 ?  (<p>...loading</p>)
+        !emails || emails.length === 0 ?  (<p>...loading</p>)
         :(
           emails.map( (v,i) => (
           <div key={i+v}>{v.address}</div>
